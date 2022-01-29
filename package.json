@@ -1,13 +1,12 @@
 {
-  "name": "applize",
+  "name": "which-regions-are-these",
   "version": "1.0.0",
-  "main": "lib/index.js",
-  "repository": "https://github.com/AsPulse/applize.git",
   "author": "AsPulse <aspulse.x@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "estrella": "^1.4.1",
     "prettier": "^2.5.1",
+    "sass": "^1.49.0",
     "typescript": "^4.5.4"
   },
   "devDependencies": {
@@ -18,8 +17,8 @@
     "eslint-config-prettier": "^8.3.0"
   },
   "scripts": {
-    "lint": "prettier --write src/** && eslint --fix --max-warnings 0 src/**",
-    "lintCheckOnly": "prettier --check src/** && eslint --max-warnings 0 src/**",
+    "lint": "prettier --write src/script/** && eslint --fix --max-warnings 0 src/script/**",
+    "lintCheckOnly": "prettier --check src/script/** && eslint --max-warnings 0 src/script/**",
     "build": "node ./build.js"
   }
 }
