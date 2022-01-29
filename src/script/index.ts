@@ -2,6 +2,7 @@ import { prefectureData } from './data/prefecture';
 import { IStorage } from './interfaces/storage';
 import { localStorage } from './localStorage';
 import { tableBuild } from './tablebuilder';
+import { nthAlphabet } from './util/nthAlphabet';
 import { randomChoice } from './util/randomChoice';
 
 const storage = new localStorage<IStorage>({});
@@ -10,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document
     .getElementById('question')
     ?.appendChild(
-      tableBuild(randomChoice(prefectureData, 5), ['name', 'population'])
+      tableBuild(randomChoice(prefectureData, 5).map((v, i) =>{
+        v.name = nthAlphabet(i, true);
+        return v;
+      }), ['name', 'population'])
     );
 });
