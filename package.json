@@ -17,8 +17,8 @@
     "eslint-config-prettier": "^8.3.0"
   },
   "scripts": {
-    "lint": "prettier --write src/** && eslint --fix --max-warnings 0 src/**",
-    "lintCheckOnly": "prettier --check src/** && eslint --max-warnings 0 src/**",
+    "lint": "prettier --write src/script/** && eslint --fix --max-warnings 0 src/script/**",
+    "lintCheckOnly": "prettier --check src/script/** && eslint --max-warnings 0 src/script/**",
     "build": "node ./build.js"
   }
 }
