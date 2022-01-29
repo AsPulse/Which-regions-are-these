@@ -1,5 +1,4 @@
 import { prefectureData } from './data/prefecture';
-import { prefectureLabel } from './interfaces/prefecture';
 import { IStorage } from './interfaces/storage';
 import { localStorage } from './localStorage';
 import { tableBuild } from './tablebuilder';
@@ -11,9 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document
     .getElementById('question')
     ?.appendChild(
-      tableBuild(
-        [prefectureLabel, ...randomChoice(prefectureData, 5)],
-        ['name', 'population']
-      )
+      tableBuild(randomChoice(prefectureData, 5), ['name', 'population'])
     );
 });

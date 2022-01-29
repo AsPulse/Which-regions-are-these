@@ -1,16 +1,18 @@
-import { IPrefecture } from './interfaces/prefecture';
+import { IPrefecture, prefectureLabel } from './interfaces/prefecture';
 
 export function tableBuild(
-  targets: { [P in keyof IPrefecture]: string | number }[],
+  targets: IPrefecture[],
   parameters: (keyof IPrefecture)[]
 ) {
   const table = document.createElement('table');
-  const data = targets.map((v) => parameters.map((e) => v[e] ?? '-'));
+  const data = [prefectureLabel, ...targets].map((v) =>
+    parameters.map((e) => v[e] ?? '-')
+  );
   data
-    .map((v) => {
+    .map((v, i) => {
       const tr = document.createElement('tr');
       v.map((e) => {
-        const td = document.createElement('td');
+        const td = document.createElement(i === 0 ? 'th' : 'td');
         td.textContent = `${e}`;
         return td;
       }).forEach((j) => tr.appendChild(j));
