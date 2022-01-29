@@ -1,8 +1,8 @@
 export class localStorage<T> {
   data: T;
   constructor(defaultValue: T) {
-    const saving = window.localStorage.__wrat__ as (string | undefined);
-    if ( saving === undefined ) {
+    const saving = window.localStorage.__wrat__ as string | undefined;
+    if (saving === undefined) {
       this.data = defaultValue;
       this.save();
     } else {
