@@ -1,7 +1,7 @@
 import { IPrefecture } from './interfaces/prefecture';
 
 export function tableBuild(
-  targets: IPrefecture[],
+  targets: { [P in keyof IPrefecture]: string | number }[],
   parameters: (keyof IPrefecture)[]
 ) {
   const table = document.createElement('table');
