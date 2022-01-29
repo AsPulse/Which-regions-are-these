@@ -6,6 +6,7 @@ const { copyFile, writeFile } = require('fs').promises;
 (async () => {
     await build({
         entryPoints: ['src/script/index.ts'],
+        target: 'web',
         bundle: true,
         outfile: 'dist/script.js',
         sourcemap: true,
