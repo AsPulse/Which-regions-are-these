@@ -1,5 +1,5 @@
 
-const { build } = require('esbuild');
+const { build } = require('estrella');
 const { compile } = require('sass');
 const { copyFile, writeFile } = require('fs').promises;
 
