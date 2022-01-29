@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         v.name = nthAlphabet(i, true);
         return v;
       }),
-      ['name', 'population']
+      ['name', 'population', 'areaSize']
     )
   );
 });
