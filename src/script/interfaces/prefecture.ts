@@ -10,5 +10,5 @@ export const prefectureLabel: { [P in keyof Required<IPrefecture>]: string } = {
   population: '人口 (人)',
   areaSize: '面積 (km^2)',
   industrialProduction: '工業生産額 (円)',
-  fisheryProduction: '水産業生産額 (円)'
-}
+  fisheryProduction: '水産業生産額 (円)',
+};
